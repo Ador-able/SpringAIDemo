@@ -82,9 +82,6 @@ public class DemoController {
 
     /**
      * 根据用户输入的消息生成JSON格式的聊天响应。
-     * 创建一个 SearchRequest 对象，设置返回最相关的前2个结果。
-     * 从 systemResource 中读取提示模板。
-     * 使用 ChatClient 构建聊天客户端，调用 RetrievalRerankAdvisor 进行检索和重排序，并生成最终的聊天响应内容。
      */
     @GetMapping(value = "/ask")
     public String ragJsonText(@RequestParam(value = "message", defaultValue = "如何使用spring ai alibaba?") String message) {
