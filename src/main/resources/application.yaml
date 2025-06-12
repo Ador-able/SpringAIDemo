@@ -1,0 +1,21 @@
+spring:
+  data:
+    redis:
+      url: redis://10.20.11.19:6379
+  ai:
+    vectorstore:
+      redis:
+        initialize-schema: true
+        index-name: demo-index
+        prefix: demo-prefix
+
+# LLM配置
+llm:
+  api-key: ""
+  base-url: https://ark.cn-beijing.volces.com/api/v3/
+  chat-model: ""
+  embedding-model: ""
+logging:
+  level:
+    com.lxy: DEBUG
+    org.springframework.ai.chat.client.advisor: DEBUG
